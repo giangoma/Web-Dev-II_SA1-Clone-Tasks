@@ -1,0 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("../Images/shelly.jpg");
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.quiz-title {
+    margin-bottom: 20px;
+    color: #009092;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.question-block {
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.answer-choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.answer-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #009092;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 100px;
+}
+
+.answer-btn:hover {
+    background-color: #009092;
+}

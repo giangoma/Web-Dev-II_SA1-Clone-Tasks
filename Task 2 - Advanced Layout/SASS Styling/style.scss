@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;600&family=Lato:wght@300;400;700&display=swap');
+
+// Define variables
+$primary-font: 'Teko', sans-serif;
+$secondary-font: 'Lato', sans-serif;
+$primary-color: #231651;
+$secondary-color: #070410;
+$highlight-color: #4DCCBD;
+$hover-color: #231651;
+$text-color: #fff;
+$highlight-hover-color: #eef36a;
+$box-shadow-color: rgba(0, 0, 0, 1);
+$font-size-large: 3em;
+$font-size-medium: 1.5em;
+$button-padding: 10px 16px;
+$button-radius: 16px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button, h1 {
+  font-family: $primary-font;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+body {
+  font-family: $secondary-font;
+  background-color: $primary-color;
+}
+
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  background-color: $secondary-color;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px $highlight-color;
+  
+  .logo {
+    color: $text-color;
+    font-family: $secondary-font;
+    font-size: $font-size-large;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 48px;
+    
+    a {
+      color: $text-color;
+      text-decoration: none;
+      font-size: $font-size-medium;
+      
+      &:hover {
+        color: $highlight-hover-color;
+      }
+    }
+  }
+  
+  .search-container {
+    display: flex;
+    
+    .search-btn {
+      background-color: $highlight-color;
+      color: $text-color;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 2em;
+      border-radius: 8px;
+      
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+}
+
+/* Container */
+.container {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Large Movie Card */
+.movie-card.large {
+  max-width: 73%;
+  margin: 48px 0;
+  background-color: $text-color;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 40px $box-shadow-color;
+  
+  .poster {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    
+    .info {
+      flex-grow: 1;
+      width: 50%;
+    }
+
+    button {
+      width: 50%;
+      font-size: 2em;
+      background-color: $secondary-color !important;
+      color: $text-color;
+      border: none;
+      padding: 10px 2px;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+}
+
+/* Movie Grid */
+.movie-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.movie-card, .movie-card-hidden {
+  background-color: $text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 45%;
+  margin: 20px 0;
+  box-shadow: 0 8px 40px $box-shadow-color;
+  position: relative;
+  
+  .poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    font-size: 2em;
+    padding: $button-padding;
+    background-color: $secondary-color;
+    color: $text-color;
+    border: none;
+    cursor: pointer;
+    border-radius: $button-radius;
+    
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
+
+/* Last Movie Cards */
+.movie-card-last {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  background-color: $text-color;
+  max-width: 73%;
+  flex-direction: row;
+  box-shadow: 0 8px 40px $box-shadow-color;
+  
+  .poster {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  .info {
+    width: 50%;
+    padding: 15px;
+  }
+}
+
+#movie-bonus {
+  display: none;
+  
+  .movie-card-hidden {
+    display: none;
+  }
+}
+
+/* Responsive design for Tablets (720px >>) */
+@media (max-width: 1023px) {
+  .navbar {
+    padding: 16px;
+    
+    .logo {
+      font-size: 2em;
+      margin-bottom: 8px;
+    }
+
+    .nav-links {
+      gap: 8px;
+      flex-wrap: wrap;
+      
+      a {
+        font-size: 1.2em;
+      }
+    }
+
+    .search-btn {
+      font-size: 1em;
+      padding: 8px 12px;
+    }
+  }
+
+  .movie-card.large, .movie-card-last {
+    display: none;
+  }
+
+  #movie-bonus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    
+    .movie-card-hidden {
+      display: block;
+      width: 45%;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-height: 800px;
+      position: relative;
+    }
+  }
+
+  .movie-grid {
+    gap: 16px;
+    width: 100%;
+    
+    .movie-card {
+      width: 45%;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-height: 800px;
+      position: relative;
+    }
+  }
+
+  .poster {
+    width: 100%;
+    height: auto;
+  }
+
+  .info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    align-self: flex-end;
+    margin-top: auto;
+  }
+}
+
+/* Responsive design for Large mobile devices (360px >>) */
+@media (max-width: 719px) {
+  .navbar {
+    padding: 16px;
+    justify-content: space-between;
+    
+    .logo {
+      font-size: 1.5em;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .search-btn {
+      font-size: 0.9em;
+      padding: 6px 10px;
+    }
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+
+  .movie-grid, #movie-bonus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    
+    .movie-card, .movie-card-hidden {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .poster {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .movie-card-large, .movie-card-last {
+    display: none;
+  }
+}

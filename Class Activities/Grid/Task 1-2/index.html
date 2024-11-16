@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewJeans</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <button class="hamburger" onclick="toggleSidebar()">☰</button>
+        <img src="../Images/nj.png" alt="NewJeans Logo">
+    </header>
+    <div class="container">
+        <aside class="sidebar hidden" id="sidebar">
+            <h2>WELCOME, BUNNIES</h2>
+            <p>Happy Bunnies Day! 🐰
+                Bunnies! Thanks for always being with NewJeans 🥕💗
+                #HappyBunniesDay
+                #Bunnies #버니즈
+                #NewJeans #뉴진스</p>
+            <p>Hope you enjoy this page! Just click outside to exit this sidebar.</p>
+            <a href="https://open.spotify.com/artist/6HvZYsbFfjnjFrWF950C9d" class="sidebar-link"><img src="../Images/listen-on-spotify.png" alt="Spotify link to NewJeans"></a>
+            <a href="https://music.apple.com/us/artist/newjeans/1635469693" class="sidebar-link"><img src="../Images/listen-on-apple.png" alt="Spotify link to NewJeans"></a>
+        </aside>
+        <main class="main-content">
+            <div class="photo-grid">
+                <img src="../Images/hanni.png" alt="Hanni, NewJeans member">
+                <img src="../Images/memshot.png" alt="All NewJeans members">
+                <img src="../Images/hyein-haerin.png" alt="Hyein and Haerin, NewJeans members">
+                <img src="../Images/minji.png" alt="Minji, NewJeans member">
+                <img src="../Images/danielle.png" alt="Danielle, NewJeans member">
+            </div>
+        </main>
+    </div>
+    <img src="../Images/nj-ppg.png" alt="NewJeans Powerpuff Girls version" class="sticker top-left">
+    <img src="https://media2.giphy.com/media/fLdGXOAl9aqmB3pJkq/giphy.gif" alt="Bunny gif" class="sticker bottom-right">
+
+    <script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('hidden');
+    }
+    </script>
+</body>
+</html>

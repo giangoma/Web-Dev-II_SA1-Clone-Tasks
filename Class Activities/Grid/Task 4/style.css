@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Guerrilla&family=Qwitcher+Grypen:wght@400;700&family=Teko:wght@300..700&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("../Images/billie-eilish.jpg");
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Bitter';
+}
+
+.product-title {
+    margin: 0;
+    font-size: 2em;
+    color: #009092;
+}
+
+.product-price {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #009092;
+}
+
+.product-description {
+    font-size: 1em;
+    line-height: 1.6em;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+}

@@ -1,0 +1,105 @@
+@font-face {
+    font-family: Nulshock;
+    src: url('../Fonts/nulshock\ bd.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: SDGlitch;
+    src: url('../Fonts/SDGlitch_Demo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; 
+    color: #00FF00; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background-color: #000; 
+    color: #00FF00; 
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #00FF00;
+}
+
+.header h1 {
+    font-family: 'Nulshock';
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+}
+
+.sidebar {
+    background-color: #000; 
+    color: #00FF00; 
+    padding: 20px;
+    border-right: 2px solid #00FF00; 
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #00FF00; 
+    text-decoration: none;
+    font-family: 'SDGlitch';
+}
+
+.main-content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.widget {
+    background-color: #000; 
+    color: #00FF00; 
+    border: 2px solid #00FF00; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); 
+}
+
+.widget img {
+    max-width: 100%;
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
+
+.video-section {
+    width: 100%;
+    padding: 20px;
+    background-color: #000; 
+    box-sizing: border-box;
+}
+
+.video-section video {
+    width: 100%;
+    height: auto;
+    border: 2px solid #00FF00; 
+    border-radius: 10px;
+}

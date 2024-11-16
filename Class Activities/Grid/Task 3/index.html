@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <!--Build a simple dashboard layout with a header, sidebar and main content area using CSS
+    Grid. Include widgets for statistics, recent activity, and notifications.-->
+
+<body>
+    <header class="header">
+        <h1>GLOBEDATA - SEE THE WORLD</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#statistics">Statistics</a></li>
+                    <li><a href="#activity">Recent Global Activity</a></li>
+                    <li><a href="#notifications">Notifications</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section id="statistics" class="widget">
+                <h2>Statistics</h2>
+                <img src="../Images/ekg.gif" alt="EKG Monitor">
+            </section>
+            <section id="activity" class="widget">
+                <h2>Recent Global Activity</h2>
+                <img src="../Images/globe.gif" alt="Globe spinning">
+            </section>
+            <section id="notifications" class="widget">
+                <h2>Notifications</h2>
+                <ul>
+                    <li>United States Election Results Out: Former President Trump to be sworn into office once again as
+                        President Elect of the United States, winning over candidate from the opposing Democratic Party
+                        and current Vice President Kamala Harris.</li>
+                    <li>US-China Rivalry: Tensions between the United States and China remain high, affecting global
+                        trade and technology.</li>
+                    <li>India-China Border Agreement: A recent border agreement between India and China has been signed,
+                        but deep-rooted strategic mistrust persists.</li>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Video Section -->
+    <div class="video-section">
+        <video autoplay loop muted>
+            <source src="../Images/hacktype.mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>

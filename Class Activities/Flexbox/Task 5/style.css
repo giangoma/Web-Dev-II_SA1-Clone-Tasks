@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Study Clash;
+    src: url('../Fonts/Study\ Clash.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    background: url(../Images/cork.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+  }
+
+body {
+    font-family: 'Study Clash';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-container {
+    background-color: #feff9c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.todo-title {
+    margin-bottom: 20px;
+    color: #964B00;
+    font-size: 2em;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #964B00;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7d4002;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #feff9c;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task label {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}

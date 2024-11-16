@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOJI-FLEXBOX</title>
+    <link rel="icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmiufMA0A5s2nKWGTsjoSvCGtL0f6IFzBz_g&s">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+</head>
+
+<body>
+
+    <div class="flexboxtasks">
+        <!--Create a simple navigation bar using Flexbox. Include at least four links
+            and style them to be horizontally aligned with even spacing.-->
+        <div class="hero-section">
+            <nav class="navbar">
+                <a href="https://shop.jojimusic.com">
+                    <img class="logo" src="https://shop.jojimusic.com/cdn/shop/files/JOJI_LOGO.png?v=1661362129"
+                        alt="Joji">
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">HOME</a>
+                    <a href="#merchandise">MERCHANDISE</a>
+                    <a href="#pandemonium">PANDEMONIUM</a>
+                    <a href="">ABOUT JOJI</a>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+            </nav>
+            <div class="joji">
+                <video src="../Images/JOJI.mp4" autoplay loop muted alt="loop video of smoke"></video>
+            </div>
+        </div>
+
+
+        <div class="task2_title" id="merchandise">
+            <h1>MERCHANDISE</h1>
+        </div>
+
+        <br>
+
+        <div class="task2_carddesign"> <!--Design a card component using FLexbox. The card should include an image, a title,
+            a description, and a button. Ensure that the content is centered & responsive.-->
+            <div class="card-wrapper">
+                <ul class="cardlist">
+                    <li class="carditem">
+                        <a href="#" class="cardlink">
+                            <img src="https://shop.jojimusic.com/cdn/shop/products/SMITHEREENS_D2C_Exclusive_Vinyl_FULL_001_1.png?v=1667930432&width=360"
+                                alt="Smithereens Exclusive Vinyl" class="cardimg">
+                            <p class="price">Dhs. 150.00 AED</p>
+                            <h2 class="itemname">SMITHEREENS <br> Exclusive Vinyl</h2>
+                            <button class="purchase"><img src="Images/CART.png" alt="Purchase"></button>
+                        </a>
+                    </li>
+
+                    <li class="carditem">
+                        <a href="#" class="cardlink">
+                            <img src="https://shop.jojimusic.com/cdn/shop/products/SMITHEREENS_Standard_CD_58e3cf9b-3060-409c-87c7-4887794aea05.png?v=1668814012&width=360"
+                                alt="Smithereens Standard CD" class="cardimg">
+                            <p class="price">Dhs. 45.00 AED</p>
+                            <h2 class="itemname">SMITHEREENS <br> Standard CD</h2>
+                            <button class="purchase"><img src="../Images/CART.png" alt="Purchase"></button>
+                        </a>
+                    </li>
+
+                    <li class="carditem">
+                        <a href="#" class="cardlink">
+                            <img src="https://shop.jojimusic.com/cdn/shop/files/JOJI_HORSE_TEE_FRONTBACK.png?v=1702577866&width=360"
+                                alt="Pandemonium Tee" class="cardimg">
+                            <p class="price">Dhs. 168.00 AED</p>
+                            <h2 class="itemname">PANDEMONIUM <br> T-Shirt</h2>
+                            <button class="purchase"><img src="../Images/CART.png" alt="Purchase"></button>
+                        </a>
+                    </li>
+
+                    <li class="carditem">
+                        <a href="#" class="cardlink">
+                            <img src="https://shop.jojimusic.com/cdn/shop/products/jojiwhitetourtee.png?v=1667596372&width=360"
+                                alt="Smithereens White Tour Tee" class="cardimg">
+                            <p class="price">Dhs. 150.00 AED</p>
+                            <h2 class="itemname">SMITHEREENS <br> White Tee</h2>
+                            <button class="purchase"><img src="../Images/CART.png" alt="Purchase"></button>
+                        </a>
+                    </li>
+
+                    <li class="carditem">
+                        <a href="#" class="cardlink">
+                            <img src="https://shop.jojimusic.com/cdn/shop/files/pandemoniumhoodiefrontandback.png?v=1699996508&width=360"
+                                alt="Pandemonium Hoodie" class="cardimg">
+                            <p class="price">Dhs. 336.00 AED</p>
+                            <h2 class="itemname">PANDEMONIUM <br> Hoodie</h2>
+                            <button class="purchase"><img src="../Images/CART.png" alt="Purchase"></button>
+                        </a>
+                    </li>
+
+                    <li class="carditem">
+                        <a href="#" class="cardlink">
+                            <img src="https://shop.jojimusic.com/cdn/shop/files/creamjojitee.png?v=1685050525&width=360"
+                                alt="Natural Oblivion Tee" class="cardimg">
+                            <p class="price">Dhs. 150.00 AED</p>
+                            <h2 class="itemname">Natural Oblivion <br> Cream Tee</h2>
+                            <button class="purchase"><img src="../Images/CART.png" alt="Purchase"></button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <br>
+
+            <div class="task3_imagegallery" id="pandemonium">
+                <!--Build a responsive image gallery using FLexbox. Arrange images in a row that
+            wraps to a new line as the screen size decreases.-->
+                <div class="task3_image-container">
+                    <img src="https://preview.redd.it/ffd6vscdbpl91.jpg?width=1080&crop=smart&auto=webp&s=ceeb394b8c33cf84e42b4d5dc3126d680c11439a"
+                        alt="Joji singing from the heart">
+                    <img src="https://www.notch.one/wp-content/uploads/2024/01/Joji-2-scaled.jpg"
+                        alt="Pandemonium Concert">
+                    <img src="https://billboardphilippines.com/wp-content/uploads/2023/12/Joji-in-Manila-4-1600x900.jpg"
+                        alt="Joji in Manila">
+                    <img src="https://preview.redd.it/2vmi1addbpl91.jpg?width=1440&format=pjpg&auto=webp&s=2ea04a5d21c02b2078469857e41aa1befa4320e2"
+                        alt="Joji singing">
+                </div>
+
+                <div class="pandemonium">
+                    <h1>PANDEMONIUM Tour</h1>
+                    <p>Missed out? See clips of the tour here.</p>
+                    <button class="pnd_btn"><a href="https://www.youtube.com/watch?v=cKwFryBnqtU">CLICK</a></button>
+                </div>
+            </div>
+
+            
+
+            <div class="task4_flexboxquiz">
+                <!--Create a quiz layout where questions are displayed in a column and answer choices
+            are displayed in a row using Flexbox. Style it to be visually appealing.-->
+            </div>
+
+            <div class="task5_todolist">
+                <!--Create a simple to-do list application where the tasks are displayed using Flexbox.
+            Each task should have a checkbox, a label, and a delete button, arranged in a flexible
+            layout.-->
+            </div>
+
+        </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weston's Chocolate Box</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+</head>
+
+<body>
+    <header class="chocolate-header">
+        <nav class="nav-menu">
+            <div class="nav-left">
+                <img src="Assets/weston-t-icon.png">
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-right">
+                <button class="nav-button" id="sign-in">Sign In</button>
+                <button class="nav-button basket-button" id="basket">Basket (0)</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <video autoplay muted loop class="hero-video">
+                <source src="Assets/hero-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2 class="weston-chocolate">WESTON'S CHOCOLATE BAR</h2>
+            <h2 class="second-hero-header">ARTISANAL CHOCOLATES, FROM THE HEART</h2>
+            <div class="occasion-selector">
+                <h3>Select Your Occasion</h3>
+                <div class="occasion-buttons">
+                    <button class="occasion-button" data-occasion="birthday">Birthday</button>
+                    <button class="occasion-button" data-occasion="anniversary">Anniversary</button>
+                    <button class="occasion-button" data-occasion="thank-you">Thank You</button>
+                    <button class="occasion-button" data-occasion="just-because">Just Because</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <h2 class="featured-packages">FEATURED ITEMS</h2>
+            <div class="chocolate-container">
+                <div class="chocolate-card" data-id="1">
+                    <h2 class="chocolate-title">Weston's x BINI - Cherry Mania</h2>
+                    <p class="chocolate-description">Meet the new collection with P-pop group BINI - sweet treats with a
+                        cherry on top!</p>
+                    <p class="chocolate-price">$29.99</p>
+                    <img src="Assets/BINI.jpg" class="chocolate-image" alt="BINI Group">
+                    <button class="chocolate-button">Add to Cart</button>
+                </div>
+
+                <div class="chocolate-card" data-id="2">
+                    <h2 class="chocolate-title">It's Knafeh</h2>
+                    <p class="chocolate-description">Run out of places to get the trendy pistachio-filled chocolate? We
+                        have them now!</p>
+                    <p class="chocolate-price">$15.99</p>
+                    <img src="Assets/its-knafeh.jpg" class="chocolate-image" alt="White Chocolate Raspberry">
+                    <button class="chocolate-button">Add to Cart</button>
+                </div>
+
+                <div class="chocolate-card" data-id="3">
+                    <h2 class="chocolate-title">Ore-ore-oh, yes</h2>
+                    <p class="chocolate-description">Meet our newest batch of OREO-flavored cookies and cream chocolate.
+                        Also best consumed with milk!</p>
+                    <p class="chocolate-price">$12.99</p>
+                    <img src="Assets/cookies-n-creme.jpg" class="chocolate-image" alt="Milk Chocolate Caramels">
+                    <button class="chocolate-button">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Weston's Chocolate Box</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>We're a chocolate company based in the heart of BGC, Fort Bonifacio in Manila, Philippines. Our team crafts exquisite chocolates
+                        using traditional methods and the finest ingredients. Each piece is handmade with care in our
+                        artisanal kitchen. Our experts have formulated the perfect mix of flavors that make your taste
+                        buds explode with joy.</p>
+                </div> <img src="Assets/BGC.jpg" alt="About Image" class="about-image">
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p>Email: info@westonschocolatebox.com</p>
+                <p>Phone: +971 50 000 0000</p>
+                <p>Address: 123 Chocolate Lane, Sweet City</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <p>Please note that shipping will incur a 10$ fee on every order.</p>
+            <div class="cart-items"></div>
+            <p class="cart-total">Total: $0.00</p>
+            <button class="checkout-button">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Occasion Modals -->
+    <div id="occasionModal" class="modal">
+        <div class="modal-content"> <span class="close">&times;</span>
+            <h2>Select Chocolates for <span id="occasionTitle"></span></h2>
+            <div class="chocolate-options">
+                <div class="chocolate-dropdown"> <label for="row1">Choose flavor for Row 1:</label> <select id="row1">
+                        <option value="Cherry Mania - $29.99">Cherry Mania</option>
+                        <option value="It's Knafeh - $15.99">It's Knafeh</option>
+                        <option value="Ore-ore-oh, yes - $12.99">Ore-ore-oh, yes</option>
+                        <option value="Milk Chocolate - Standard">Milk Chocolate - Standard</option>
+                        <option value="White Chocolate - Standard">White Chocolate - Standard</option>
+                        <option value="White Chocolate - Standard">Chocolate Glazed Strawberries</option>
+                    </select> </div>
+                <div class="chocolate-dropdown"> <label for="row2">Choose flavor for Row 2:</label> <select id="row2">
+                    <option value="Cherry Mania - $29.99">Cherry Mania</option>
+                    <option value="It's Knafeh - $15.99">It's Knafeh</option>
+                    <option value="Ore-ore-oh, yes - $12.99">Ore-ore-oh, yes</option>
+                    <option value="Milk Chocolate - Standard">Milk Chocolate - Standard</option>
+                    <option value="White Chocolate - Standard">White Chocolate - Standard</option>
+                    <option value="White Chocolate - Standard">Chocolate Glazed Strawberries</option>
+                    </select> </div>
+                <div class="chocolate-dropdown"> <label for="row3">Choose flavor for Row 3:</label> <select id="row3">
+                    <option value="Cherry Mania - $29.99">Cherry Mania</option>
+                    <option value="It's Knafeh - $15.99">It's Knafeh</option>
+                    <option value="Ore-ore-oh, yes - $12.99">Ore-ore-oh, yes</option>
+                    <option value="Milk Chocolate - Standard">Milk Chocolate - Standard</option>
+                    <option value="White Chocolate - Standard">White Chocolate - Standard</option>
+                    <option value="White Chocolate - Standard">Chocolate Glazed Strawberries</option>
+                    </select> </div>
+                <div class="occasion-images"> <img src="Assets/birthday.jpg" alt="Birthday" class="occasion-image"
+                        id="birthdayImage"> <img src="Assets/anniversary.png" alt="Anniversary" class="occasion-image"
+                        id="anniversaryImage"> <img src="Assets/thank-you.jpg" alt="Thank You" class="occasion-image"
+                        id="thankYouImage"> <img src="Assets/just-because.jpg" alt="Just Because" class="occasion-image"
+                        id="justBecauseImage"> </div>
+            </div> <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Sign-in Modal -->
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="sign-in-container">
+                <div class="sign-in-image">
+                    <img src="Assets/sign-in-image.png" alt="Sign In">
+                </div>
+                <div class="sign-in-form">
+                    <h2>Sign In</h2>
+                    <p>Join the Weston's family and get special discounts on promo items!</p>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button class="login-button">Log In</button>
+                    <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                        data-login_uri="https://your.domain/your_login_endpoint" data-auto_prompt="false"></div>
+                    <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+                        data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
